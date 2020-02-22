@@ -33,11 +33,32 @@ figure.foto-legenda figcaption{
 	box-sizing: border-box;
 	transition: opacity 1;
 	color: white;
-
-
-
 }
 
 figure.foto-legenda:hover figcaption{
 	opacity: 1;
+}
+
+/*Formatacao do menu*/
+
+nav#menu{
+	display: block; /*para garantir que o menu possa a vir a flutuar, uma vez que o block pode flutuar*/
+}
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	padding: 10px; /* para dar espaco dentro do objecto*/
+	margin: 2px; /*para dar espaco fora do objecto*/
+	position: absolute;
+	top: -10px;
+	left: 300px;
+}
+
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+}
+
+nav#menu h1{
+	display: none;
 }
