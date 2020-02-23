@@ -1,6 +1,12 @@
 /*para reconhecer acentuacoes latinas*/
 @charset "UTF-8";
-
+/*@import ;*/
+@font-face {
+	font-family: 'FonteLogo';
+	src: url('../_fonts/bubblegum-sans-regular.otf');
+	/*font-style: normal;
+	font-weight: normal;*/
+}
 body{
 	background-color: #dddddd;
 	color: rgba(0,0,0,1);
@@ -28,7 +34,7 @@ header#cabecalho{
 }
 
 header#cabecalho h1{
-	font-family: Arial, sans-serif;
+	font-family: 'FonteLogo', sans-serif;
 	color: #606060;
 	font-size: 30pt;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
@@ -38,7 +44,7 @@ header#cabecalho h1{
 }
 
 header#cabecalho h2{
-	font-family: Arial, sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	color: #888888;
 	font-size: 10pt;
 	/*para garantir que nao haja espaco entre o titulo 1 e 2*/
@@ -119,4 +125,30 @@ nav#menu a:hover{
 	color: white;
 	text-decoration: underline;
 }
+
+section#corpo{
+	display: block;
+	width: 1000px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+aside#lateral{
+	display: block;
+	width: 500px;
+	float: right;
+}
+
+footer#rodape{
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+	text-align: center;
+}
+
+
+
 
