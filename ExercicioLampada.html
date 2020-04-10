@@ -14,14 +14,14 @@
     </ol>
 
     <figure>
-        <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="Imagem de uma lampada" title="lampada apagada" onclick="quebrarLampada()" onmousemove="acenderLampada()" onmouseout="apagarLampada()">
+        <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="Imagem de uma lampada" title="lampada apagada" onclick="mudarLampada('lampada-quebrada')" onmousemove="mudarLampada('lampada-acesa')" onmouseout="mudarLampada('lampada-apagada')">
         <figcaption id="legenda"> </figcaption>
 
     </figure>
 
 
     <script>
-        function acenderLampada(){
+        /*function acenderLampada(){
             document.getElementById('lampada').src="_imagens/lampada-acesa.jpg";
             document.getElementById('lampada').title='lampada acessa';
             document.getElementById('legenda').innerHTML='lampada <strong>acesa</strong>';
@@ -37,6 +37,18 @@
             document.getElementById('lampada').src="_imagens/lampada-quebrada.jpg";
             document.getElementById('lampada').title="lampada quebrada"
             document.getElementById('legenda').innerHTML='lampada <strong>quebrada</strong>';
+        }*/
+
+        var quebrada=false;
+        function mudarLampada(tipo) {
+            if(!quebrada){
+                document.getElementById('lampada').src="_imagens/"+tipo+".jpg";
+                document.getElementById('lampada').title=tipo;
+                document.getElementById('legenda').innerText=tipo;
+                if(tipo=='lampada-quebrada') quebrada=true;
+            }
+
+
         }
 
 
