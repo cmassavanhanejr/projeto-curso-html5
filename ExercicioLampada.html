@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio da Lamapada</title>
+</head>
+<body>
+    <h1>Exercicio da Lampada</h1>
+    <h2>===== Instruções de Uso: =====</h2>
+    <ol>
+        <li>passe o mouse por cima e acenda a lampada</li>
+        <li>Retire o mouse e apague a lampada</li>
+        <li>Clique sobre a lampada para quebra-la</li>
+    </ol>
+
+    <figure>
+        <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="Imagem de uma lampada" title="lampada apagada" onclick="quebrarLampada()" onmousemove="acenderLampada()" onmouseout="apagarLampada()">
+        <figcaption id="legenda"> </figcaption>
+
+    </figure>
+
+
+    <script>
+        function acenderLampada(){
+            document.getElementById('lampada').src="_imagens/lampada-acesa.jpg";
+            document.getElementById('lampada').title='lampada acessa';
+            document.getElementById('legenda').innerHTML='lampada <strong>acesa</strong>';
+        }
+        
+        function apagarLampada() {
+            document.getElementById('lampada').src="_imagens/lampada-apagada.jpg";
+            document.getElementById('lampada').title="lampada desligada";
+            document.getElementById('legenda').innerHTML='lampada <strong>apagada</strong>';
+        }
+
+        function quebrarLampada() {
+            document.getElementById('lampada').src="_imagens/lampada-quebrada.jpg";
+            document.getElementById('lampada').title="lampada quebrada"
+            document.getElementById('legenda').innerHTML='lampada <strong>quebrada</strong>';
+        }
+
+
+      </script>
+
+</body>
+</html>
