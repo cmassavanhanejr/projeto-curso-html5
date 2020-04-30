@@ -4,6 +4,13 @@
     <meta charset="utf-8"/>
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <script language="JavaScript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calcularTotal() {
+            val qtd=
+        }
+    </script>
+
 
 </head>
 <body>
@@ -29,38 +36,110 @@
         </nav>
     </header>
 
-    Fale Conosco > Contato
-    Formulário de Contato
-    por Gustavo Guanabara
-    Atualizado em 01/Maio/2013
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contacto</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+        </article>
+        <form method="post" action="mailto:cmassavanhanejr@gmail.com" oninput="calcularTotal()">
+            <fieldset id="usario">
+                <p>
+                    <legend>Identificação do Usuário</legend>
 
-    Identificação do Usuário
-        Nome:
-        Senha:
-        E-mail:
-        Sexo:
-            - Masculino
-            - Feminino
-        Data de Nascimento:
+                </p>
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" maxlength="40" size="30" placeholder="Nome Completo"/>
 
-    Endereço do Usuário
-        Logradouro:
-        Número:
-        Estado:
-        Cidade:
+                <p>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="8 digitos" size="8" maxlength="8"/>
+                </p>
+                <hr>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="nome@email.com"/>
+                </p>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="sexo" value="Masculino" id="masculino"><label for="masculino">Masculino</label> <br/>
+                    <input type="radio" name="sexo" value="Feminino" id="feminino"><label for="feminino">Feminino</label>
+                </fieldset>
+                <p>
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="datetime-local" id="data-nascimento" name="data-nascimento">
+                </p>
+            </fieldset>
 
-    Mensagem do Usuário
-        Grau de Urgência:
-        Mensagem:
+            <fieldset id="endereco">
+                <legend>Endereço do Utilizador</legend>
+                <p><label for="localizacao">localização:</label>
+                    <input type="text" id="localizacao" name="localizacao" placeholder="Bairro, Av., Nr"> <label>Número:</label>
+                    <input type="number" max="9999" min="0"/></p>
+                <p><label for="provincia">Provincia:</label>
+                    <select id="provincia" >
+                        <optgroup label="sul">
+                            <option value="Maputo-Provincia">Maputo-Provincia</option>
+                            <option value="Maputo-Cidade">Maputo-Cidade</option>
+                            <option value="Gaza">Gaza</option>
+                            <option value="Inhambane">Inhambane</option>
+                        </optgroup>
+                        <optgroup label="centro">
+                            <option value="Sofala">Sofala</option>
+                            <option value="Manica">Manica</option>
+                            <option value="Tete">Tete</option>
+                            <option value="Zambezia">Zambezia</option>
+                        </optgroup>
+                        <norte>
+                            <option value="Nampula">Nampula</option>
+                            <option value="Niassa">Niassa</option>
+                            <option value="Cabo Delgado">Cabo Delgado</option>
+                        </norte>
+                    </select></p>
+                <p><label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="sua cidade" list="cidades"></p>
+                    <datalist id="cidades">
+                        <option value="Matola"></option>
+                        <option value="Maputo"></option>
+                        <option value="Maxixe"></option>
+                        <option value="Xai-Xai"></option>
+                        <option value="Beira"></option>
+                    </datalist>
+            </fieldset>
 
-    Quero um Google Glass
-        Gostaria de adquirir um Google Glass quando disponível
-        Cor:
-        Quantidade:
-        Preço Total: R$
+            <fieldset id="mensagem">
+                <legend>Mensagem do Usuário</legend>
+                <p><label for="urgencia">Grau de Urgência:</label>
+                    Min<input type="range" min="0" max="10" step="2" id="urgencia">Max</p>
+                <p><label for="txtMensagem">Mensagem</label>
+                    <textarea name="mensagem" maxlength="500" cols="45" rows="5" id="txtMensagem" placeholder="sua mensagem..." ></textarea></p>
+            </fieldset>
+
+            <fieldset id="adquirir">
+                <legend>Quero um Google Glass</legend>
+
+                   <input type="checkbox" name="gostaria" id="gostaria"> Gostaria de adquirir um Google Glass quando disponível?
 
 
-    [BOTÃO ENVIAR]
+                <p><label for="color">Cor:</label>
+                    <input type="color" id="color" name="color"></p>
+                <p><label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" max="0" min="10"></p>
+                <p><label for="preco-total" >Preço Total: R$</label>
+                    <input type="number" readonly id="preco-total" name="preco-total" placeholder="total a pagar"/></p>
+            </fieldset>
+
+
+           <input type="image" name="enviar" src="_imagens/botao-enviar.png"/>
+        </form>
+    </section>
+
 
     <footer id="rodape">
         <p>Copyright &copy; 2013 - by Gustavo Guanabara<br/>
