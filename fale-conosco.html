@@ -4,10 +4,13 @@
     <meta charset="utf-8"/>
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
     <script language="JavaScript" src="_javascript/funcoes.js"></script>
     <script>
         function calcularTotal() {
-            val qtd=
+            qtd = parseInt(document.getElementById('quantidade').value);
+            total=qtd*1500;
+            document.getElementById('preco-total').value = total;
         }
     </script>
 
@@ -66,7 +69,7 @@
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" placeholder="nome@email.com"/>
                 </p>
-                <fieldset>
+                <fieldset id="fSexo">
                     <legend>Sexo</legend>
                     <input type="radio" name="sexo" value="Masculino" id="masculino"><label for="masculino">Masculino</label> <br/>
                     <input type="radio" name="sexo" value="Feminino" id="feminino"><label for="feminino">Feminino</label>
@@ -121,16 +124,16 @@
                     <textarea name="mensagem" maxlength="500" cols="45" rows="5" id="txtMensagem" placeholder="sua mensagem..." ></textarea></p>
             </fieldset>
 
-            <fieldset id="adquirir">
+            <fieldset id="pedido">
                 <legend>Quero um Google Glass</legend>
 
-                   <input type="checkbox" name="gostaria" id="gostaria"> Gostaria de adquirir um Google Glass quando disponível?
-
+                   <input type="checkbox" checked name="gostaria" id="gostaria">
+                    <lablel for="gostaria"> Gostaria de adquirir um Google Glass quando disponível?</lablel>
 
                 <p><label for="color">Cor:</label>
                     <input type="color" id="color" name="color"></p>
                 <p><label for="quantidade">Quantidade:</label>
-                    <input type="number" id="quantidade" max="0" min="10"></p>
+                    <input type="number" id="quantidade" name="quantidade" min="0" value="0" max="5"></p>
                 <p><label for="preco-total" >Preço Total: R$</label>
                     <input type="number" readonly id="preco-total" name="preco-total" placeholder="total a pagar"/></p>
             </fieldset>
